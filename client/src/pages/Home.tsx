@@ -85,7 +85,7 @@ export default function Home() {
             <div className="flex items-center gap-2">
               <Heart className="w-8 h-8 text-primary" />
               <span className="text-2xl font-display font-semibold text-foreground">
-                Cuidados Especiales
+                BENCOMO
               </span>
             </div>
             <div className="hidden md:flex items-center gap-8">
@@ -120,7 +120,7 @@ export default function Home() {
         <div className="container relative z-10">
           <div className="max-w-2xl">
             <h1 className="text-5xl md:text-7xl font-display font-bold text-foreground mb-6 leading-tight animate-fade-in-up">
-              Cuidado Profesional con Calidez Humana
+              Bienestar y Salud
             </h1>
             <p className="text-xl md:text-2xl text-foreground/80 mb-8 leading-relaxed animate-fade-in-up" style={{animationDelay: '200ms'}}>
               Brindamos servicios de salud especializados en cuidados domiciliarios, hospitalarios y rehabilitación física, 
@@ -371,12 +371,12 @@ export default function Home() {
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <Heart className="w-8 h-8" />
-                <span className="text-2xl font-display font-semibold">
-                  Cuidados Especiales
-                </span>
-              </div>
-              <p className="text-primary-foreground/80 leading-relaxed">
-                Brindando servicios de salud con profesionalismo y calidez humana desde hace más de 10 años.
+              <span className="text-2xl font-display font-semibold">
+                BENCOMO
+              </span>
+            </div>
+            <p className="text-primary-foreground/80 leading-relaxed">
+              Brindando servicios de salud con profesionalismo y calidez humana desde hace más de 10 años.
               </p>
             </div>
 
@@ -410,7 +410,7 @@ export default function Home() {
           </div>
 
           <div className="border-t border-primary-foreground/20 pt-8 text-center text-primary-foreground/60">
-            <p>&copy; 2026 Cuidados Especiales. Todos los derechos reservados.</p>
+            <p>&copy; 2026 BENCOMO - Bienestar y Salud. Todos los derechos reservados.</p>
           </div>
         </div>
       </footer>
