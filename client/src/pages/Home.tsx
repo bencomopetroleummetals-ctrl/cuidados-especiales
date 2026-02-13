@@ -83,7 +83,7 @@ export default function Home() {
         <nav className="container py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center justify-center">
-              <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663351260548/ufNYexdIuAvkAOaV.jpg" alt="BENCOMO Logo" className="h-16 w-auto" />
+              <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663351260548/qxzyiIWZhGwNgFkM.png" alt="BENCOMO Logo" className="h-16 w-auto" />
             </div>
             <div className="hidden md:flex items-center gap-8">
               <a href="#servicios" className="text-foreground/80 hover:text-primary transition-colors duration-300">
@@ -117,7 +117,7 @@ export default function Home() {
         <div className="container relative z-10">
           <div className="max-w-2xl">
             <div className="flex justify-center mb-8 animate-fade-in-up">
-              <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663351260548/ufNYexdIuAvkAOaV.jpg" alt="BENCOMO Logo" className="h-32 w-auto" />
+              <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663351260548/qxzyiIWZhGwNgFkM.png" alt="BENCOMO Logo" className="h-32 w-auto" />
             </div>
             <h1 className="text-5xl md:text-7xl font-display font-bold text-foreground mb-6 leading-tight animate-fade-in-up" style={{animationDelay: '100ms'}}>
               Bienestar y Cuidado
@@ -378,20 +378,16 @@ export default function Home() {
 
           <div className="grid md:grid-cols-5 gap-6">
             {[
-              { hours: "6 horas", price: "$45", description: "Cuidado matutino o vespertino", features: ["Aseo personal", "Medicamentos", "Signos vitales", "Comidas"] },
-              { hours: "8 horas", price: "$55", description: "Jornada laboral completa", features: ["Todo incluido en 6h", "Ejercicios", "Juegos lúdicos", "Limpieza"] },
-              { hours: "10 horas", price: "$65", description: "Cobertura extendida", features: ["Todo incluido en 8h", "Acompañamiento", "Estimulación", "Monitoreo"] },
-              { hours: "12 horas", price: "$75", description: "Medio día completo", features: ["Cobertura integral", "Atención prioritaria", "Reportes diarios", "Flexibilidad"] },
-              { hours: "24 horas", price: "$120", description: "Cuidado total", features: ["Disponibilidad 24/7", "Emergencias", "Descansos incluidos", "Máxima seguridad"], highlight: true }
+              { hours: "6 horas", description: "Cuidado matutino o vespertino", features: ["Aseo personal", "Medicamentos", "Signos vitales", "Comidas"] },
+              { hours: "8 horas", description: "Jornada laboral completa", features: ["Todo incluido en 6h", "Ejercicios", "Juegos lúdicos", "Limpieza"] },
+              { hours: "10 horas", description: "Cobertura extendida", features: ["Todo incluido en 8h", "Acompañamiento", "Estimulación", "Monitoreo"] },
+              { hours: "12 horas", description: "Medio día completo", features: ["Cobertura integral", "Atención prioritaria", "Reportes diarios", "Flexibilidad"] },
+              { hours: "24 horas", description: "Cuidado total", features: ["Disponibilidad 24/7", "Emergencias", "Descansos incluidos", "Máxima seguridad"], highlight: true }
             ].map((plan, idx) => (
               <Card key={idx} className={`flex flex-col h-full transition-all duration-300 hover:shadow-xl hover:scale-105 ${plan.highlight ? 'ring-2 ring-primary bg-primary/5' : ''}`}>
                 <CardContent className="p-6 flex flex-col h-full">
-                  <h3 className="text-2xl font-display font-bold text-foreground mb-2">{plan.hours}</h3>
-                  <p className="text-sm text-foreground/60 mb-4">{plan.description}</p>
-                  <div className="mb-6">
-                    <span className="text-4xl font-bold text-primary">{plan.price}</span>
-                    <span className="text-foreground/60">/día</span>
-                  </div>
+                  <h3 className="text-3xl font-display font-bold text-primary mb-4">{plan.hours}</h3>
+                  <p className="text-sm text-foreground/60 mb-6">{plan.description}</p>
                   <ul className="space-y-2 mb-6 flex-grow">
                     {plan.features.map((feature, i) => (
                       <li key={i} className="flex items-start gap-2 text-sm text-foreground/70">
@@ -505,7 +501,7 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663351260548/ufNYexdIuAvkAOaV.jpg" alt="BENCOMO Logo" className="h-16 w-auto" />
+                <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663351260548/qxzyiIWZhGwNgFkM.png" alt="BENCOMO Logo" className="h-16 w-auto" />
             </div>
             <p className="text-primary-foreground/80 leading-relaxed">
               Brindando servicios de salud con profesionalismo y calidez humana desde hace más de 10 años.
