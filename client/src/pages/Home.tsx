@@ -31,28 +31,28 @@ export default function Home() {
     {
       icon: HomeIcon,
       title: "Cuidados Domiciliarios",
-      description: "Atención personalizada en la comodidad de su hogar, con profesionales capacitados que brindan cuidado integral y acompañamiento constante.",
-      features: ["Asistencia personal", "Administración de medicamentos", "Compañía y apoyo emocional", "Cuidados de higiene"],
+      description: "Atención personalizada en la comodidad de su hogar para pacientes Cognitivos, Paliativos y otras condiciones, con profesionales capacitados que brindan cuidado integral.",
+      features: ["Limpieza de la unidad (habitación)", "Aseo e higiene personal", "Juegos lúdicos y estimulación", "Ejercicios de elongación", "Administración de medicamentos", "Toma de signos vitales"],
       image: "https://private-us-east-1.manuscdn.com/sessionFile/eYuZQv3wZfuwwFs7nq57mv/sandbox/YppwhOFI8xFpm7wXkvyIg5-img-4_1770946976000_na1fn_c2VydmljaW9zLWRvbWljaWxpYXJpb3M.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvZVl1WlF2M3daZnV3d0ZzN25xNTdtdi9zYW5kYm94L1lwcHdoT0ZJOHhGcG03d1hrdnlJZzUtaW1nLTRfMTc3MDk0Njk3NjAwMF9uYTFmbl9jMlZ5ZG1samFXOXpMV1J2YldsamFXeHBZWEpwYjNNLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=DsEn3A2t4qDgso~r~ALbyvYYEko9i7B6yEinlS8aY~f65E8mYpCveQvc-XiEqo~aHUiydkE-YFM0HgZFROj-ZlWYF3TaHRDexAUI13kQIwAB04acoq5DG-Z76OTw5WP5L~kiaU7ASzrRZ8autnTmCy-HsHKukZ6IzjHFfbPsk4MM81md0YVYflplz-5-C64ug2QoaS0ZSj2PvWzlkqLyShAEHyYcCeiO7jFiqeWcDFb8NQVezQfT0kcVJ3rl~UR7dAmUnsqY-Z4ESddy3cZPA11geHYaeeZfWdAq26Yylk-Ywi6-SPGAWiS3Vp6PoxO1PIGIqLqw153rJE1p4NfsvA__"
     },
     {
       icon: Hospital,
       title: "Cuidados Hospitalarios",
-      description: "Acompañamiento profesional durante la hospitalización, asegurando confort, seguimiento médico y apoyo continuo para pacientes y familiares.",
+      description: "Acompañamiento profesional durante la hospitalización para pacientes Cognitivos, Paliativos y otras condiciones, asegurando confort y seguimiento médico continuo.",
       features: ["Acompañamiento 24/7", "Coordinación con personal médico", "Apoyo a familiares", "Seguimiento post-hospitalización"],
       image: "https://private-us-east-1.manuscdn.com/sessionFile/eYuZQv3wZfuwwFs7nq57mv/sandbox/YppwhOFI8xFpm7wXkvyIg5-img-3_1770946979000_na1fn_Y3VpZGFkby1ob3NwaXRhbGFyaW8.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvZVl1WlF2M3daZnV3d0ZzN25xNTdtdi9zYW5kYm94L1lwcHdoT0ZJOHhGcG03d1hrdnlJZzUtaW1nLTNfMTc3MDk0Njk3OTAwMF9uYTFmbl9ZM1ZwWkdGa2J5MW9iM053YVhSaGJHRnlhVzgucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=oxTpjeEMkPRSQfwDZGcy3rm~8GAIOjyQEQxcvc7InQEeo59AQ8FYCSvUpImw~Csa1sY3SRnaNMZlXQyjK-To343W7LIC6tuT4cGqABC28QmGQ4XINKtUv99MG-3gu1PK8K-Z5teafWGDNXOVkqbDlmSk49d4AD4R8wcGuYAApu3U2stfqphLJSzVdbly~V~SDFe55AH2zHO9FmxEiBpGGdx7BZ2IrhIEVNLzT3U5VqgiPW9ZWGgZKVn5PuR3iyIs4~6lz~XMHYbUaqupLLtSbgtNacLNJhSKp9mM~kxkWxv7~QOcj1F0bCs0VphqjtVJjwxYXB1ZB-JrBm1S0VRHeA__"
     },
     {
       icon: Activity,
       title: "Rehabilitación Física Integral",
-      description: "Programas personalizados de fisioterapia y rehabilitación diseñados para recuperar movilidad, fuerza y autonomía en cada paciente.",
+      description: "Programas personalizados de fisioterapia para pacientes Cognitivos, Paliativos y otras condiciones, diseñados para recuperar movilidad y autonomía.",
       features: ["Terapia física personalizada", "Ejercicios de movilidad", "Recuperación post-operatoria", "Prevención de lesiones"],
       image: "https://private-us-east-1.manuscdn.com/sessionFile/eYuZQv3wZfuwwFs7nq57mv/sandbox/YppwhOFI8xFpm7wXkvyIg5-img-2_1770946973000_na1fn_cmVoYWJpbGl0YWNpb24tZmlzaWNh.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvZVl1WlF2M3daZnV3d0ZzN25xNTdtdi9zYW5kYm94L1lwcHdoT0ZJOHhGcG03d1hrdnlJZzUtaW1nLTJfMTc3MDk0Njk3MzAwMF9uYTFmbl9jbVZvWVdKcGJHbDBZV05wYjI0dFptbHphV05oLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=SmhegnE3rOfHbP6CT8ikU1x2GjJOHh1lbLZMTtscrralwYD4sXzGSJ59FfgbtLsQ7VTB-cK0sS69qPIVNJtuZVHgu96yXjSJ9Bry6nAyqfUQ3q6KQbDcQM0niCBYxnN2~vv7YCENYnA8g5NSK406Z-3eopMECBUFv5wHawiz4G86SH0pykUwktabgLaahQlFiCegz5SK6eBQ~NMxlxJT~LPLU44my6bURRs8TaEqpzCtLSG2VjCWHiOlElXK0H4Zo690lY~S0erFpz~BY3nKILYQreT86deN2w6JSEUc-pR-NrNEa7KMlA-Q7XH6URS4e4sB2-ISIFeVRJXiHdLXJg__"
     },
     {
       icon: Heart,
       title: "Servicios Especializados",
-      description: "Atención especializada para condiciones específicas, incluyendo cuidados paliativos, geriatría, y apoyo en enfermedades crónicas.",
+      description: "Atención especializada para pacientes Cognitivos, Paliativos y otras condiciones, incluyendo geriatría y apoyo en enfermedades crónicas.",
       features: ["Cuidados paliativos", "Geriatría especializada", "Manejo de enfermedades crónicas", "Apoyo nutricional"],
       image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80"
     }
@@ -117,7 +117,7 @@ export default function Home() {
         <div className="container relative z-10">
           <div className="max-w-2xl">
             <h1 className="text-5xl md:text-7xl font-display font-bold text-foreground mb-6 leading-tight animate-fade-in-up">
-              Bienestar y Salud
+              Bienestar y Cuidado
             </h1>
             <p className="text-xl md:text-2xl text-foreground/80 mb-8 leading-relaxed animate-fade-in-up" style={{animationDelay: '200ms'}}>
               Brindamos servicios de salud especializados en cuidados domiciliarios, hospitalarios y rehabilitación física, 
@@ -404,7 +404,7 @@ export default function Home() {
           </div>
 
           <div className="border-t border-primary-foreground/20 pt-8 text-center text-primary-foreground/60">
-            <p>&copy; 2026 BENCOMO - Bienestar y Salud. Todos los derechos reservados.</p>
+            <p>&copy; 2026 BENCOMO - Bienestar y Cuidado. Todos los derechos reservados.</p>
           </div>
         </div>
       </footer>
