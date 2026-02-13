@@ -404,9 +404,17 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="mt-12 p-8 bg-accent/10 rounded-2xl border border-accent/20 text-center">
-            <p className="text-foreground/80 mb-2">💰 <strong>Promoción especial:</strong> Contrata 5 días y recibe descuento del 10%</p>
-            <p className="text-sm text-foreground/60">Válido para nuevos clientes. Consulta términos y condiciones.</p>
+          <div className="mt-12 grid md:grid-cols-2 gap-6">
+            <div className="p-8 bg-primary/10 rounded-2xl border-2 border-primary text-center">
+              <p className="text-lg font-semibold text-foreground mb-2">🎉 <strong>Nuevos Clientes</strong></p>
+              <p className="text-4xl font-bold text-primary mb-2">10% Descuento</p>
+              <p className="text-sm text-foreground/70">Durante el primer mes de servicio</p>
+            </div>
+            <div className="p-8 bg-accent/10 rounded-2xl border-2 border-accent text-center">
+              <p className="text-lg font-semibold text-foreground mb-2">⭐ <strong>Clientes Existentes</strong></p>
+              <p className="text-4xl font-bold text-accent mb-2">5% Descuento</p>
+              <p className="text-sm text-foreground/70">A partir del segundo mes en adelante</p>
+            </div>
           </div>
         </div>
       </section>
