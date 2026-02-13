@@ -364,6 +364,141 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Sección de Precios */}
+      <section id="precios" className="py-20 bg-gradient-to-br from-background via-background to-secondary/10">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-display font-bold text-foreground mb-4">
+              Los Mejores Precios del Mercado
+            </h2>
+            <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
+              Planes flexibles adaptados a tus necesidades. Elige el horario que mejor se ajuste a tu situación.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-5 gap-6">
+            {[
+              { hours: "6 horas", price: "$45", description: "Cuidado matutino o vespertino", features: ["Aseo personal", "Medicamentos", "Signos vitales", "Comidas"] },
+              { hours: "8 horas", price: "$55", description: "Jornada laboral completa", features: ["Todo incluido en 6h", "Ejercicios", "Juegos lúdicos", "Limpieza"] },
+              { hours: "10 horas", price: "$65", description: "Cobertura extendida", features: ["Todo incluido en 8h", "Acompañamiento", "Estimulación", "Monitoreo"] },
+              { hours: "12 horas", price: "$75", description: "Medio día completo", features: ["Cobertura integral", "Atención prioritaria", "Reportes diarios", "Flexibilidad"] },
+              { hours: "24 horas", price: "$120", description: "Cuidado total", features: ["Disponibilidad 24/7", "Emergencias", "Descansos incluidos", "Máxima seguridad"], highlight: true }
+            ].map((plan, idx) => (
+              <Card key={idx} className={`flex flex-col h-full transition-all duration-300 hover:shadow-xl hover:scale-105 ${plan.highlight ? 'ring-2 ring-primary bg-primary/5' : ''}`}>
+                <CardContent className="p-6 flex flex-col h-full">
+                  <h3 className="text-2xl font-display font-bold text-foreground mb-2">{plan.hours}</h3>
+                  <p className="text-sm text-foreground/60 mb-4">{plan.description}</p>
+                  <div className="mb-6">
+                    <span className="text-4xl font-bold text-primary">{plan.price}</span>
+                    <span className="text-foreground/60">/día</span>
+                  </div>
+                  <ul className="space-y-2 mb-6 flex-grow">
+                    {plan.features.map((feature, i) => (
+                      <li key={i} className="flex items-start gap-2 text-sm text-foreground/70">
+                        <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <Button size="lg" className={`w-full rounded-full ${plan.highlight ? '' : 'variant-outline'}`}>
+                    Solicitar
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="mt-12 p-8 bg-accent/10 rounded-2xl border border-accent/20 text-center">
+            <p className="text-foreground/80 mb-2">💰 <strong>Promoción especial:</strong> Contrata 5 días y recibe descuento del 10%</p>
+            <p className="text-sm text-foreground/60">Válido para nuevos clientes. Consulta términos y condiciones.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Sección de Reclutamiento */}
+      <section className="py-20 bg-gradient-to-br from-primary/5 via-background to-background">
+        <div className="container">
+          <div className="max-w-3xl mx-auto">
+            <div className="bg-white dark:bg-card rounded-2xl shadow-lg p-10 border border-primary/20">
+              <div className="text-center mb-8">
+                <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">
+                  ¡Únete a Nuestro Equipo!
+                </h2>
+                <p className="text-lg text-foreground/70">
+                  Estamos buscando profesionales comprometidos con la excelencia en el cuidado de la salud
+                </p>
+              </div>
+
+              <div className="mb-8 p-6 bg-primary/5 rounded-xl border-l-4 border-primary">
+                <p className="text-foreground mb-4 leading-relaxed">
+                  Si eres <strong>Médico, Enfermero(a), Auxiliar de Enfermería, Profesional de la Salud en Cuidado, Bienestar y Mantenimiento de Pacientes, o Cuidador</strong> y deseas trabajar con nosotros en un ambiente profesional y humanista, ¡nos encantaría conocerte!
+                </p>
+                <p className="text-foreground/80 text-sm">
+                  Ofrecemos oportunidades de crecimiento, capacitación continua y un equipo comprometido con la calidad de vida de nuestros pacientes.
+                </p>
+              </div>
+
+              <form className="space-y-4">
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">Nombre Completo</label>
+                    <input 
+                      type="text"
+                      className="w-full px-4 py-3 rounded-xl border border-input bg-background focus:outline-none focus:ring-2 focus:ring-ring transition-all"
+                      placeholder="Tu nombre"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">Profesión/Especialidad</label>
+                    <input 
+                      type="text"
+                      className="w-full px-4 py-3 rounded-xl border border-input bg-background focus:outline-none focus:ring-2 focus:ring-ring transition-all"
+                      placeholder="Ej: Enfermero(a), Cuidador, etc."
+                    />
+                  </div>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">Correo Electrónico</label>
+                    <input 
+                      type="email"
+                      className="w-full px-4 py-3 rounded-xl border border-input bg-background focus:outline-none focus:ring-2 focus:ring-ring transition-all"
+                      placeholder="tu@email.com"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">Teléfono</label>
+                    <input 
+                      type="tel"
+                      className="w-full px-4 py-3 rounded-xl border border-input bg-background focus:outline-none focus:ring-2 focus:ring-ring transition-all"
+                      placeholder="+1 (555) 123-4567"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-foreground mb-2">Experiencia / Certificaciones</label>
+                  <textarea 
+                    rows={3}
+                    className="w-full px-4 py-3 rounded-xl border border-input bg-background focus:outline-none focus:ring-2 focus:ring-ring transition-all resize-none"
+                    placeholder="Cuéntanos sobre tu experiencia y certificaciones relevantes..."
+                  />
+                </div>
+
+                <Button size="lg" className="w-full rounded-full text-lg py-6 bg-primary hover:bg-primary/90">
+                  Enviar Solicitud de Empleo
+                </Button>
+              </form>
+
+              <p className="text-center text-sm text-foreground/60 mt-6">
+                Revisaremos tu solicitud y nos pondremos en contacto contigo en breve. ¡Gracias por tu interés!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-primary text-primary-foreground py-12">
         <div className="container">
