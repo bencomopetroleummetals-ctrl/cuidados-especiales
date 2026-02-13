@@ -83,10 +83,7 @@ export default function Home() {
         <nav className="container py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <Heart className="w-8 h-8 text-primary" />
-              <span className="text-2xl font-display font-semibold text-foreground">
-                BENCOMO
-              </span>
+              <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663351260548/VIwHgmgVlOsvjseP.jpg" alt="BENCOMO Logo" className="h-12 w-auto" />
             </div>
             <div className="hidden md:flex items-center gap-8">
               <a href="#servicios" className="text-foreground/80 hover:text-primary transition-colors duration-300">
@@ -370,10 +367,7 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <Heart className="w-8 h-8" />
-              <span className="text-2xl font-display font-semibold">
-                BENCOMO
-              </span>
+                <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663351260548/VIwHgmgVlOsvjseP.jpg" alt="BENCOMO Logo" className="h-12 w-auto" />
             </div>
             <p className="text-primary-foreground/80 leading-relaxed">
               Brindando servicios de salud con profesionalismo y calidez humana desde hace más de 10 años.
