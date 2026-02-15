@@ -778,36 +778,6 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {
-                title: "Equipo Profesional",
-                description: "Médicos, enfermeros y cuidadores especializados comprometidos con tu bienestar",
-                image: "https://images.unsplash.com/photo-1631217314830-4e6a9f0d3ccf?w=800&q=80"
-              },
-              {
-                title: "Espacios de Atención",
-                description: "Instalaciones modernas y cómodas diseñadas para la comodidad del paciente",
-                image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80"
-              },
-              {
-                title: "Equipamiento Médico",
-                description: "Tecnología de punta para garantizar la mejor atención y monitoreo",
-                image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80"
-              },
-              {
-                title: "Rehabilitación",
-                description: "Espacios especializados para terapia física y recuperación",
-                image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80"
-              },
-              {
-                title: "Cuidado Domiciliario",
-                description: "Atención personalizada en la comodidad de tu hogar",
-                image: "https://images.unsplash.com/photo-1631217314830-4e6a9f0d3ccf?w=800&q=80"
-              },
-              {
-                title: "Ambiente Acogedor",
-                description: "Espacios diseñados para transmitir calidez y confianza",
-                image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80"
-              },
-              {
                 title: "Dedicación",
                 description: "Nuestro compromiso diario con el bienestar y cuidado de cada paciente",
                 image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663351260548/eAFDHdAdhXsGNTOY.jpg"
