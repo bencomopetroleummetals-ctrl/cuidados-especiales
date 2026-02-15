@@ -806,6 +806,11 @@ export default function Home() {
                 title: "Ambiente Acogedor",
                 description: "Espacios diseñados para transmitir calidez y confianza",
                 image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80"
+              },
+              {
+                title: "Dedicación",
+                description: "Nuestro compromiso diario con el bienestar y cuidado de cada paciente",
+                image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663351260548/eAFDHdAdhXsGNTOY.jpg"
               }
             ].map((item, idx) => (
               <div key={idx} className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 h-64">
