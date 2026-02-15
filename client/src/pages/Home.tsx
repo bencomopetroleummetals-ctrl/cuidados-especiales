@@ -23,7 +23,10 @@ import {
   MapPin,
   CheckCircle2,
   MessageCircle,
-  Star
+  Star,
+  Calendar,
+  User,
+  ArrowRight
 } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
@@ -756,6 +759,165 @@ export default function Home() {
                 💰 <strong>Beneficio:</strong> Al registrarte, recibirás 10% de descuento durante tu primer mes de servicio.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Sección de Galería */}
+      <section className="py-20 bg-gradient-to-br from-background to-secondary/5">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-display font-bold text-foreground mb-4">
+              Galera de BENCOMO
+            </h2>
+            <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
+              Conoce nuestro equipo profesional y los espacios donde brindamos cuidado de calidad.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                title: "Equipo Profesional",
+                description: "Médicos, enfermeros y cuidadores especializados comprometidos con tu bienestar",
+                image: "https://images.unsplash.com/photo-1631217314830-4e6a9f0d3ccf?w=800&q=80"
+              },
+              {
+                title: "Espacios de Atención",
+                description: "Instalaciones modernas y cómodas diseñadas para la comodidad del paciente",
+                image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80"
+              },
+              {
+                title: "Equipamiento Médico",
+                description: "Tecnología de punta para garantizar la mejor atención y monitoreo",
+                image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80"
+              },
+              {
+                title: "Rehabilitación",
+                description: "Espacios especializados para terapia física y recuperación",
+                image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80"
+              },
+              {
+                title: "Cuidado Domiciliario",
+                description: "Atención personalizada en la comodidad de tu hogar",
+                image: "https://images.unsplash.com/photo-1631217314830-4e6a9f0d3ccf?w=800&q=80"
+              },
+              {
+                title: "Ambiente Acogedor",
+                description: "Espacios diseñados para transmitir calidez y confianza",
+                image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80"
+              }
+            ].map((item, idx) => (
+              <div key={idx} className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 h-64">
+                <img 
+                  src={item.image} 
+                  alt={item.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end p-6 group-hover:from-black/90">
+                  <h3 className="text-xl font-semibold text-white mb-2">{item.title}</h3>
+                  <p className="text-white/80 text-sm">{item.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Sección de Blog */}
+      <section className="py-20 bg-gradient-to-br from-primary/5 via-background to-background">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-display font-bold text-foreground mb-4">
+              Blog de Salud y Bienestar
+            </h2>
+            <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
+              Artículos, consejos y guías para el cuidado integral de la salud.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Cómo Preparar el Hogar para Cuidados Especiales",
+                excerpt: "Guía completa para adaptar tu hogar y crear un ambiente seguro y cómodo para el paciente.",
+                author: "Dr. Ricardo BENCOMO",
+                date: "15 de Febrero, 2026",
+                category: "Cuidados Domiciliarios",
+                image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80"
+              },
+              {
+                title: "Ejercicios de Rehabilitación para Recuperación Post-Operatoria",
+                excerpt: "Descubre los mejores ejercicios y técnicas para acelerar tu recuperación después de una cirugía.",
+                author: "Lic. Fisioterapeuta María",
+                date: "12 de Febrero, 2026",
+                category: "Rehabilitación",
+                image: "https://images.unsplash.com/photo-1631217314830-4e6a9f0d3ccf?w=800&q=80"
+              },
+              {
+                title: "Apoyo Emocional para Familiares de Pacientes Paliativos",
+                excerpt: "Consejos y recursos para cuidadores y familiares durante momentos difíciles.",
+                author: "Psic. Clara Rodríguez",
+                date: "10 de Febrero, 2026",
+                category: "Cuidado Paliativo",
+                image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80"
+              },
+              {
+                title: "Nutrición Adecuada en Pacientes con Movilidad Reducida",
+                excerpt: "Recomendaciones nutricionales para mantener la salud y energía en pacientes con limitaciones.",
+                author: "Nutricionista Ana Pérez",
+                date: "8 de Febrero, 2026",
+                category: "Nutrición",
+                image: "https://images.unsplash.com/photo-1631217314830-4e6a9f0d3ccf?w=800&q=80"
+              },
+              {
+                title: "Señales de Alerta: Cuándo Buscar Atención Médica Urgente",
+                excerpt: "Aprende a identificar síntomas que requieren atención inmediata y cómo actuar rápidamente.",
+                author: "Dr. Carlos Mendoza",
+                date: "5 de Febrero, 2026",
+                category: "Salud General",
+                image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80"
+              },
+              {
+                title: "Manejo del Estrés en Cuidadores Profesionales",
+                excerpt: "Técnicas efectivas para mantener el bienestar mental y físico como cuidador profesional.",
+                author: "Coach de Bienestar Laura",
+                date: "1 de Febrero, 2026",
+                category: "Bienestar",
+                image: "https://images.unsplash.com/photo-1631217314830-4e6a9f0d3ccf?w=800&q=80"
+              }
+            ].map((post, idx) => (
+              <Card key={idx} className="flex flex-col h-full hover:shadow-lg transition-all duration-300 overflow-hidden">
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src={post.image}
+                    alt={post.title}
+                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
+                    {post.category}
+                  </div>
+                </div>
+                <CardContent className="p-6 flex flex-col h-full">
+                  <h3 className="text-xl font-semibold text-foreground mb-3 line-clamp-2">{post.title}</h3>
+                  <p className="text-foreground/70 mb-4 flex-grow line-clamp-3">{post.excerpt}</p>
+                  <div className="space-y-2 border-t border-border pt-4 text-sm text-foreground/60">
+                    <div className="flex items-center gap-2">
+                      <User className="w-4 h-4" />
+                      {post.author}
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Calendar className="w-4 h-4" />
+                      {post.date}
+                    </div>
+                  </div>
+                  <Button variant="outline" className="w-full mt-4 rounded-lg group">
+                    Leer Más
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
