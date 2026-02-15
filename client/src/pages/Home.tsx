@@ -20,7 +20,9 @@ import {
   Phone,
   Mail,
   MapPin,
-  CheckCircle2
+  CheckCircle2,
+  MessageCircle,
+  Star
 } from "lucide-react";
 import { useState } from "react";
 
@@ -502,6 +504,75 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Sección de Testimonios */}
+      <section className="py-20 bg-gradient-to-br from-background via-secondary/5 to-background">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-display font-bold text-foreground mb-4">
+              Lo Que Dicen Nuestros Pacientes
+            </h2>
+            <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
+              Historias reales de personas que han confiado en BENCOMO para su cuidado y recuperación.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                name: "Ana Lucila Barón",
+                service: "Cuidado Domiciliario y Rehabilitación",
+                testimonial: "Estuve 7 meses con Ricardo BENCOMO en cuidado domiciliario y rehabilitación hasta mi recuperación de trasplante total de cadera. Lo recomiendo siempre.",
+                phone: "+57 320 8938962",
+                rating: 5
+              },
+              {
+                name: "Carmen Lucia",
+                service: "Cuidado Paliativo",
+                testimonial: "Ricardo BENCOMO trabajó con mi esposo Fernando Zamudio en cuidado paliativo. Mis hijas y yo estamos muy contentas con la atención recibida.",
+                phone: "+57 313 8522137",
+                rating: 5
+              },
+              {
+                name: "Yolanda Caicedo",
+                service: "Recomendación Personal",
+                testimonial: "Conozco a Ricardo BENCOMO y lo recomiendo ampliamente. Es una persona confiable y dedicada al cuidado de sus pacientes.",
+                phone: "+57 314 3139808",
+                rating: 5
+              }
+            ].map((testimonial, idx) => (
+              <Card key={idx} className="flex flex-col h-full hover:shadow-lg transition-all duration-300 hover:scale-105">
+                <CardContent className="p-8 flex flex-col h-full">
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                  <p className="text-foreground/80 mb-6 flex-grow leading-relaxed italic">
+                    "{testimonial.testimonial}"
+                  </p>
+                  <div className="border-t border-border pt-4">
+                    <p className="font-semibold text-foreground mb-1">{testimonial.name}</p>
+                    <p className="text-sm text-foreground/60 mb-3">{testimonial.service}</p>
+                    <p className="text-sm text-primary font-medium">{testimonial.phone}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Botón de WhatsApp Flotante */}
+      <a 
+        href="https://wa.me/573025886714?text=Hola%20BENCOMO%2C%20me%20gustaría%20conocer%20más%20sobre%20sus%20servicios"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-8 right-8 z-40 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 flex items-center justify-center"
+        title="Contáctanos por WhatsApp"
+      >
+        <MessageCircle className="w-6 h-6" />
+      </a>
 
       {/* Footer */}
       <footer className="bg-primary text-primary-foreground py-12">
