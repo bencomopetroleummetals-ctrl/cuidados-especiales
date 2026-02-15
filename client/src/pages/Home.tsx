@@ -9,6 +9,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { 
   Heart, 
   Home as HomeIcon, 
@@ -25,9 +26,35 @@ import {
   Star
 } from "lucide-react";
 import { useState } from "react";
+import { toast } from "sonner";
 
 export default function Home() {
   const [activeService, setActiveService] = useState<number | null>(null);
+  const [formData, setFormData] = useState({
+    nombre: '',
+    email: '',
+    telefono: '',
+    servicio: '',
+    descripcion: ''
+  });
+
+  const handleFormChange = (e: any) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleFormSubmit = (e: any) => {
+    e.preventDefault();
+    if (!formData.nombre || !formData.email || !formData.telefono || !formData.servicio) {
+      toast.error('Por favor completa todos los campos requeridos');
+      return;
+    }
+    toast.success('¡Gracias por tu pre-registro! Nos contactaremos pronto con tu presupuesto personalizado.');
+    setFormData({ nombre: '', email: '', telefono: '', servicio: '', descripcion: '' });
+  };
 
   const services = [
     {
@@ -559,6 +586,176 @@ export default function Home() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Sección de Preguntas Frecuentes */}
+      <section className="py-20 bg-gradient-to-br from-background to-secondary/5">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-display font-bold text-foreground mb-4">
+              Preguntas Frecuentes
+            </h2>
+            <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
+              Resolvemos tus dudas sobre nuestros servicios, contratación y disponibilidad.
+            </p>
+          </div>
+
+          <div className="max-w-3xl mx-auto">
+            <Accordion type="single" collapsible className="w-full space-y-4">
+              <AccordionItem value="item-1" className="border border-border rounded-lg px-6 py-4">
+                <AccordionTrigger className="text-lg font-semibold text-foreground hover:text-primary transition-colors">
+                  ¿Cómo puedo contratar los servicios de BENCOMO?
+                </AccordionTrigger>
+                <AccordionContent className="text-foreground/80 pt-4">
+                  Puedes contactarnos a través de nuestro formulario de pre-registro, llamando al +57 302 588 6714, enviando un email a info@bencomobc.com o usando nuestro chat de WhatsApp. Nos encargaremos de evaluar tus necesidades y ofrecerte un presupuesto personalizado.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-2" className="border border-border rounded-lg px-6 py-4">
+                <AccordionTrigger className="text-lg font-semibold text-foreground hover:text-primary transition-colors">
+                  ¿Qué tipos de pacientes atienden?
+                </AccordionTrigger>
+                <AccordionContent className="text-foreground/80 pt-4">
+                  Atendemos pacientes Cognitivos, Paliativos y con otras condiciones especiales. Nuestro equipo está capacitado para brindar cuidados domiciliarios, hospitalarios, rehabilitación física y servicios especializados adaptados a cada situación.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-3" className="border border-border rounded-lg px-6 py-4">
+                <AccordionTrigger className="text-lg font-semibold text-foreground hover:text-primary transition-colors">
+                  ¿Cuáles son los horarios disponibles?
+                </AccordionTrigger>
+                <AccordionContent className="text-foreground/80 pt-4">
+                  Ofrecemos planes flexibles de 6, 8, 10, 12 y 24 horas. Estamos disponibles 24/7 para emergencias y podemos adaptar nuestros horarios a tus necesidades específicas.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-4" className="border border-border rounded-lg px-6 py-4">
+                <AccordionTrigger className="text-lg font-semibold text-foreground hover:text-primary transition-colors">
+                  ¿Cuáles son las formas de pago?
+                </AccordionTrigger>
+                <AccordionContent className="text-foreground/80 pt-4">
+                  Aceptamos más de una forma de pago para tu comodidad. Contamos con descuentos especiales: 10% para nuevos clientes durante el primer mes y 5% para clientes existentes a partir del segundo mes. Consulta directamente para conocer todas nuestras opciones de pago.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-5" className="border border-border rounded-lg px-6 py-4">
+                <AccordionTrigger className="text-lg font-semibold text-foreground hover:text-primary transition-colors">
+                  ¿Qué incluye el cuidado domiciliario?
+                </AccordionTrigger>
+                <AccordionContent className="text-foreground/80 pt-4">
+                  Nuestro cuidado domiciliario incluye: limpieza de la unidad (habitación), aseo e higiene personal, juegos lúdicos y estimulación, ejercicios de elongación, administración de medicamentos y toma de signos vitales.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-6" className="border border-border rounded-lg px-6 py-4">
+                <AccordionTrigger className="text-lg font-semibold text-foreground hover:text-primary transition-colors">
+                  ¿Cómo puedo trabajar con BENCOMO?
+                </AccordionTrigger>
+                <AccordionContent className="text-foreground/80 pt-4">
+                  Si eres médico, enfermero, auxiliar de enfermería o cuidador profesional, puedes enviar tu solicitud a través de nuestro formulario de reclutamiento. Buscamos profesionales comprometidos con la excelencia en el cuidado de la salud.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
+        </div>
+      </section>
+
+      {/* Sección de Pre-registro */}
+      <section className="py-20 bg-gradient-to-br from-primary/5 via-background to-background">
+        <div className="container">
+          <div className="max-w-2xl mx-auto">
+            <div className="bg-white dark:bg-card rounded-2xl shadow-lg p-10 border border-primary/20">
+              <div className="text-center mb-8">
+                <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">
+                  Pre-Registro Gratuito
+                </h2>
+                <p className="text-lg text-foreground/70">
+                  Regístrate ahora y recibe una consulta inicial gratuita con presupuesto personalizado
+                </p>
+              </div>
+
+              <form onSubmit={handleFormSubmit} className="space-y-4">
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">Nombre Completo *</label>
+                    <input 
+                      type="text"
+                      name="nombre"
+                      value={formData.nombre}
+                      onChange={handleFormChange}
+                      className="w-full px-4 py-3 rounded-xl border border-input bg-background focus:outline-none focus:ring-2 focus:ring-ring transition-all"
+                      placeholder="Tu nombre"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">Email *</label>
+                    <input 
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleFormChange}
+                      className="w-full px-4 py-3 rounded-xl border border-input bg-background focus:outline-none focus:ring-2 focus:ring-ring transition-all"
+                      placeholder="tu@email.com"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">Teléfono *</label>
+                    <input 
+                      type="tel"
+                      name="telefono"
+                      value={formData.telefono}
+                      onChange={handleFormChange}
+                      className="w-full px-4 py-3 rounded-xl border border-input bg-background focus:outline-none focus:ring-2 focus:ring-ring transition-all"
+                      placeholder="+57 302 588 6714"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">Servicio Requerido *</label>
+                    <select 
+                      name="servicio"
+                      value={formData.servicio}
+                      onChange={handleFormChange}
+                      className="w-full px-4 py-3 rounded-xl border border-input bg-background focus:outline-none focus:ring-2 focus:ring-ring transition-all"
+                      required
+                    >
+                      <option value="">Selecciona un servicio</option>
+                      <option value="Cuidados Domiciliarios">Cuidados Domiciliarios</option>
+                      <option value="Cuidados Hospitalarios">Cuidados Hospitalarios</option>
+                      <option value="Rehabilitación Física">Rehabilitación Física</option>
+                      <option value="Servicios Especializados">Servicios Especializados</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-foreground mb-2">Descripción de Necesidades</label>
+                  <textarea 
+                    rows={4}
+                    name="descripcion"
+                    value={formData.descripcion}
+                    onChange={handleFormChange}
+                    className="w-full px-4 py-3 rounded-xl border border-input bg-background focus:outline-none focus:ring-2 focus:ring-ring transition-all resize-none"
+                    placeholder="Cuéntanos sobre tu situación para ofrecerte el mejor servicio..."
+                  />
+                </div>
+
+                <Button size="lg" className="w-full rounded-full text-lg py-6 bg-primary hover:bg-primary/90">
+                  Registrarme Ahora
+                </Button>
+              </form>
+
+              <p className="text-center text-sm text-foreground/60 mt-6">
+                💰 <strong>Beneficio:</strong> Al registrarte, recibirás 10% de descuento durante tu primer mes de servicio.
+              </p>
+            </div>
           </div>
         </div>
       </section>
