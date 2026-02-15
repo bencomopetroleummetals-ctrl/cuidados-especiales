@@ -786,6 +786,16 @@ export default function Home() {
                 title: "Bienestar",
                 description: "Pacientes sonrientes y satisfechos con la calidad de nuestro cuidado integral",
                 image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663351260548/uFTUGoEHqMFYAamN.jpg"
+              },
+              {
+                title: "Cuidado",
+                description: "Atención personalizada y humanizada en cada momento del cuidado",
+                image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663351260548/JxgIhqVBSVPQeGjd.jpg"
+              },
+              {
+                title: "Ambiente Familiar",
+                description: "Espacios diseñados para crear un ambiente cálido y familiar",
+                image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663351260548/JxgIhqVBSVPQeGjd.jpg"
               }
             ].map((item, idx) => (
               <div key={idx} className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 h-64">
