@@ -811,6 +811,11 @@ export default function Home() {
                 title: "Dedicación",
                 description: "Nuestro compromiso diario con el bienestar y cuidado de cada paciente",
                 image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663351260548/eAFDHdAdhXsGNTOY.jpg"
+              },
+              {
+                title: "Bienestar",
+                description: "Pacientes sonrientes y satisfechos con la calidad de nuestro cuidado integral",
+                image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663351260548/uFTUGoEHqMFYAamN.jpg"
               }
             ].map((item, idx) => (
               <div key={idx} className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 h-64">
