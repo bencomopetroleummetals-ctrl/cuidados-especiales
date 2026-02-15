@@ -796,6 +796,11 @@ export default function Home() {
                 title: "Ambiente Familiar",
                 description: "Espacios diseñados para crear un ambiente cálido y familiar",
                 image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663351260548/JxgIhqVBSVPQeGjd.jpg"
+              },
+              {
+                title: "El Arte de Servir",
+                description: "Nuestro equipo dedicado a brindar el mejor servicio con profesionalismo y calidez humana",
+                image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663351260548/qaYVzEQxvxqNyCwE.jpg"
               }
             ].map((item, idx) => (
               <div key={idx} className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 h-64">
