@@ -275,7 +275,7 @@ export default function Home() {
                   <Phone className="w-8 h-8 text-primary" />
                 </div>
                 <h3 className="font-display font-semibold text-lg mb-2">Teléfono</h3>
-                <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                <p className="text-muted-foreground">+57 302 588 6714</p>
               </Card>
 
               <Card className="text-center p-6 hover:shadow-lg transition-shadow duration-500">
@@ -283,7 +283,7 @@ export default function Home() {
                   <Mail className="w-8 h-8 text-accent" />
                 </div>
                 <h3 className="font-display font-semibold text-lg mb-2">Email</h3>
-                <p className="text-muted-foreground">info@cuidadosespeciales.com</p>
+                <p className="text-muted-foreground">info@bencomobc.com</p>
               </Card>
 
               <Card className="text-center p-6 hover:shadow-lg transition-shadow duration-500">
@@ -476,7 +476,7 @@ export default function Home() {
                     <input 
                       type="tel"
                       className="w-full px-4 py-3 rounded-xl border border-input bg-background focus:outline-none focus:ring-2 focus:ring-ring transition-all"
-                      placeholder="+1 (555) 123-4567"
+                      placeholder="+57 302 588 6714"
                     />
                   </div>
                 </div>
@@ -531,11 +531,11 @@ export default function Home() {
               <ul className="space-y-2 text-primary-foreground/80">
                 <li className="flex items-center gap-2">
                   <Phone className="w-4 h-4" />
-                  +1 (555) 123-4567
+                  +57 302 588 6714
                 </li>
                 <li className="flex items-center gap-2">
                   <Mail className="w-4 h-4" />
-                  info@cuidadosespeciales.com
+                  info@bencomobc.com
                 </li>
                 <li className="flex items-center gap-2">
                   <MapPin className="w-4 h-4" />
