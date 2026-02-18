@@ -82,6 +82,20 @@ export default function Home() {
       image: "https://private-us-east-1.manuscdn.com/sessionFile/eYuZQv3wZfuwwFs7nq57mv/sandbox/YppwhOFI8xFpm7wXkvyIg5-img-2_1770946973000_na1fn_cmVoYWJpbGl0YWNpb24tZmlzaWNh.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvZVl1WlF2M3daZnV3d0ZzN25xNTdtdi9zYW5kYm94L1lwcHdoT0ZJOHhGcG03d1hrdnlJZzUtaW1nLTJfMTc3MDk0Njk3MzAwMF9uYTFmbl9jbVZvWVdKcGJHbDBZV05wYjI0dFptbHphV05oLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=SmhegnE3rOfHbP6CT8ikU1x2GjJOHh1lbLZMTtscrralwYD4sXzGSJ59FfgbtLsQ7VTB-cK0sS69qPIVNJtuZVHgu96yXjSJ9Bry6nAyqfUQ3q6KQbDcQM0niCBYxnN2~vv7YCENYnA8g5NSK406Z-3eopMECBUFv5wHawiz4G86SH0pykUwktabgLaahQlFiCegz5SK6eBQ~NMxlxJT~LPLU44my6bURRs8TaEqpzCtLSG2VjCWHiOlElXK0H4Zo690lY~S0erFpz~BY3nKILYQreT86deN2w6JSEUc-pR-NrNEa7KMlA-Q7XH6URS4e4sB2-ISIFeVRJXiHdLXJg__"
     },
     {
+      icon: Activity,
+      title: "Cuidados y Rehabilitación Ortopédica",
+      description: "Atención especializada para pacientes Cognitivos, Paliativos y otras condiciones con necesidades ortopédicas, incluyendo recuperación post-operatoria de prótesis de cadera y otras intervenciones.",
+      features: ["Prótesis parcial o total de cadera", "Recuperación post-operatoria ortopédica", "Terapia de movilidad articular", "Manejo del dolor y comodidad", "Acompañamiento durante rehabilitación"],
+      image: "https://private-us-east-1.manuscdn.com/sessionFile/eYuZQv3wZfuwwFs7nq57mv/sandbox/YppwhOFI8xFpm7wXkvyIg5-img-2_1770946973000_na1fn_cmVoYWJpbGl0YWNpb24tZmlzaWNh.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvZVl1WlF2M3daZnV3d0ZzN25xNTdtdi9zYW5kYm94L1lwcHdoT0ZJOHhGcG03d1hrdnlJZzUtaW1nLTJfMTc3MDk0Njk3MzAwMF9uYTFmbl9jbVZvWVdKcGJHbDBZV05wYjI0dFptbHphV05oLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=SmhegnE3rOfHbP6CT8ikU1x2GjJOHh1lbLZMTtscrralwYD4sXzGSJ59FfgbtLsQ7VTB-cK0sS69qPIVNJtuZVHgu96yXjSJ9Bry6nAyqfUQ3q6KQbDcQM0niCBYxnN2~vv7YCENYnA8g5NSK406Z-3eopMECBUFv5wHawiz4G86SH0pykUwktabgLaahQlFiCegz5SK6eBQ~NMxlxJT~LPLU44my6bURRs8TaEqpzCtLSG2VjCWHiOlElXK0H4Zo690lY~S0erFpz~BY3nKILYQreT86deN2w6JSEUc-pR-NrNEa7KMlA-Q7XH6URS4e4sB2-ISIFeVRJXiHdLXJg__"
+    },
+    {
+      icon: Heart,
+      title: "Acompañamiento en Estado Terminal",
+      description: "Cuidados compasivos y de calidad de vida para pacientes en estado terminal, priorizando su confort, dignidad y apoyo emocional a la familia.",
+      features: ["Cuidados paliativos especializados", "Manejo del dolor y síntomas", "Apoyo emocional y espiritual", "Acompañamiento familiar", "Cuidados de confort integral"],
+      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80"
+    },
+    {
       icon: Heart,
       title: "Servicios Especializados",
       description: "Atención especializada para pacientes Cognitivos, Paliativos y otras condiciones, incluyendo geriatría y apoyo en enfermedades crónicas.",
