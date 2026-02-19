@@ -26,7 +26,8 @@ import {
   Star,
   Calendar,
   User,
-  ArrowRight
+  ArrowRight,
+  Award
 } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
@@ -841,6 +842,66 @@ export default function Home() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Sección de Certificaciones y Acreditaciones */}
+      <section className="py-20 bg-gradient-to-r from-primary/5 to-secondary/5">
+        <div className="container">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">
+              Certificaciones y Acreditaciones
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              BENCOMO cumple con los más altos estándares de calidad y regulaciones sanitarias para garantizar 
+              la seguridad y bienestar de nuestros pacientes.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="bg-background rounded-2xl p-8 border-2 border-border hover:border-primary/50 transition-all duration-300 text-center">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="font-display font-semibold text-lg text-foreground mb-2">Licencia Sanitaria</h3>
+              <p className="text-muted-foreground text-sm">Registro y aprobación de autoridades sanitarias locales</p>
+            </div>
+
+            <div className="bg-background rounded-2xl p-8 border-2 border-border hover:border-primary/50 transition-all duration-300 text-center">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <CheckCircle2 className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="font-display font-semibold text-lg text-foreground mb-2">Normas ISO</h3>
+              <p className="text-muted-foreground text-sm">Cumplimiento de estándares internacionales de calidad</p>
+            </div>
+
+            <div className="bg-background rounded-2xl p-8 border-2 border-border hover:border-primary/50 transition-all duration-300 text-center">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Award className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="font-display font-semibold text-lg text-foreground mb-2">Personal Certificado</h3>
+              <p className="text-muted-foreground text-sm">Profesionales con certificaciones en salud y bienestar</p>
+            </div>
+
+            <div className="bg-background rounded-2xl p-8 border-2 border-border hover:border-primary/50 transition-all duration-300 text-center">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Heart className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="font-display font-semibold text-lg text-foreground mb-2">Ética Profesional</h3>
+              <p className="text-muted-foreground text-sm">Código de ética y confidencialidad garantizado</p>
+            </div>
+          </div>
+
+          <div className="mt-16 bg-primary/10 rounded-2xl p-8 border-2 border-primary/20">
+            <div className="text-center">
+              <h3 className="text-2xl font-display font-semibold text-foreground mb-4">Compromiso con la Excelencia</h3>
+              <p className="text-muted-foreground max-w-2xl mx-auto mb-6">
+                Nuestro equipo se somete regularmente a capacitaciones, auditorías de calidad y evaluaciones de desempeño 
+                para asegurar que cada paciente reciba la mejor atención posible.
+              </p>
+              <p className="text-primary font-semibold">Verificación disponible: +57 302 588 6714 | info@bencomobc.com</p>
+            </div>
           </div>
         </div>
       </section>
