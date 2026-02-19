@@ -583,6 +583,13 @@ export default function Home() {
                 testimonial: "Conozco a Ricardo BENCOMO y lo recomiendo ampliamente. Es una persona confiable y dedicada al cuidado de sus pacientes.",
                 phone: "+57 314 3139808",
                 rating: 5
+              },
+              {
+                name: "Doña Silvia de Pulido",
+                service: "Cuidado Paliativo - Estado Terminal",
+                testimonial: "Gracias por cuidar a mi esposo en sus últimos días con tanta entrega, respeto y humanidad. Más que un enfermero, fuiste un ángel que nos acompañó en uno de los momentos más difíciles de nuestra vida. Tu paciencia, tu trato dulce y tu profesionalismo nos dieron tranquilidad cuando más lo necesitábamos. Que Dios te bendiga por cada gesto y por haber honrado su vida hasta el final con tanto amor.",
+                phone: "+57 310 5669344",
+                rating: 5
               }
             ].map((testimonial, idx) => (
               <Card key={idx} className="flex flex-col h-full hover:shadow-lg transition-all duration-300 hover:scale-105">
