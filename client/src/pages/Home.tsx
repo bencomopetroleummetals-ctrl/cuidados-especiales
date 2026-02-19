@@ -782,7 +782,7 @@ export default function Home() {
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-display font-bold text-foreground mb-4">
-              Galera de BENCOMO
+              Galería de BENCOMO
             </h2>
             <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
               Conoce nuestro equipo profesional y los espacios donde brindamos cuidado de calidad.
@@ -815,6 +815,11 @@ export default function Home() {
                 title: "El Arte de Servir",
                 description: "Nuestro equipo dedicado a brindar el mejor servicio con profesionalismo y calidez humana",
                 image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663351260548/qaYVzEQxvxqNyCwE.jpg"
+              },
+              {
+                title: "Calidad Humana Hasta el Final",
+                description: "Acompañamiento compasivo y cuidados de calidad en cada etapa de la vida",
+                image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663351260548/mYOGCMPtioySBQUQ.jpg"
               }
             ].map((item, idx) => (
               <div key={idx} className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 h-64">
