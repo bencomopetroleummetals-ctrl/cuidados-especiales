@@ -1,7 +1,10 @@
 {
   "buildCommand": "pnpm build",
-  "startCommand": "node dist/index.js",
-  "env": {
-    "NODE_ENV": "production"
-  }
+  "outputDirectory": "dist/public",
+  "rewrites": [
+    {
+      "source": "/:path((?!.*\\.).*)",
+      "destination": "/index.html"
+    }
+  ]
 }
