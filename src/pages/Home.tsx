@@ -287,7 +287,7 @@ export default function Home() {
                     Email: ${formDataContacto.email}
                     Teléfono: ${formDataContacto.tel}
                     Profesión: ${formDataContacto.profession}`;
-    const mailtoUrl = `mailto:kevinshe01@gmail.com?subject=Contacto%20desde%20la%20página&body=${encodeURIComponent(body)}`;
+    const mailtoUrl = `mailto:info@bencomobc.com?subject=Contacto%20desde%20la%20página&body=${encodeURIComponent(body)}`;
     window.open(mailtoUrl, "_blank");
   };
   return (
