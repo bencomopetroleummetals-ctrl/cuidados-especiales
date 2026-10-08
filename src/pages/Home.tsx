@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Diseño Humanista Orgánico:
  * - Formas orgánicas con bordes curvos asimétricos
  * - Paleta: terracota (#D4A574), verde salvia (#8BA888), beige cremoso (#F5EFE6), azul petróleo (#2C5F6F)
@@ -294,15 +294,21 @@ export default function Home() {
     <div className="min-h-screen">
       {/* Header/Navegación */}
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-        <nav className="container py-4">
+        <nav className="container py-4" aria-label="Navegación principal">
           <div className="flex items-center justify-between">
-            <div className="flex items-center justify-center">
+            <a
+              href="/"
+              className="flex items-center justify-center"
+              aria-label="BENCOMO, ir al inicio"
+            >
               <img
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663351260548/qxzyiIWZhGwNgFkM.png"
-                alt="BENCOMO Logo"
+                src="/BENCOMO.png"
+                alt="BENCOMO Bienestar y Cuidado"
                 className="h-16 w-auto"
+                width="512"
+                height="512"
               />
-            </div>
+            </a>
             <div className="hidden md:flex items-center gap-8">
               <a
                 href="#servicios"
@@ -322,14 +328,23 @@ export default function Home() {
               >
                 Contacto
               </a>
-              <Button className="rounded-full">Solicitar Información</Button>
+              <Button
+                className="rounded-full"
+                onClick={() => (window.location.href = "#contacto")}
+              >
+                Solicitar Información
+              </Button>
             </div>
           </div>
         </nav>
       </header>
 
+      <main>
       {/* Hero Section - Asimétrico con imagen de fondo */}
-      <section className="relative min-h-[85vh] flex items-center overflow-hidden">
+        <section
+          className="relative min-h-[85vh] flex items-center overflow-hidden"
+          aria-labelledby="hero-title"
+        >
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -343,12 +358,16 @@ export default function Home() {
           <div className="max-w-2xl">
             <div className="flex justify-center animate-fade-in-up">
               <img
-                src="BENCOMO.png"
-                alt="BENCOMO Logo"
+                  src="/BENCOMO.png"
+                  alt="BENCOMO Bienestar y Cuidado"
                 className="h-52 w-auto object-fill opacity-90"
+                  width="512"
+                  height="512"
+                  fetchPriority="high"
               />
             </div>
             <h1
+                id="hero-title"
               className="text-5xl md:text-7xl font-display font-bold text-foreground mb-6 leading-tight animate-fade-in-up"
               style={{ animationDelay: "100ms" }}
             >
@@ -359,8 +378,8 @@ export default function Home() {
               style={{ animationDelay: "200ms" }}
             >
               Brindamos servicios de salud especializados en cuidados
-              domiciliarios, hospitalarios y rehabilitación física, priorizando
-              el bienestar integral de cada paciente.
+                domiciliarios, hospitalarios y rehabilitación física,
+                priorizando el bienestar integral de cada paciente.
             </p>
             <div
               className="flex flex-col sm:flex-row gap-4 animate-fade-in-up"
@@ -388,10 +407,17 @@ export default function Home() {
       </section>
 
       {/* Sección de Servicios */}
-      <section id="servicios" className="py-20 bg-muted/30 scroll-mt-16">
+        <section
+          id="servicios"
+          className="py-20 bg-muted/30 scroll-mt-16"
+          aria-labelledby="servicios-title"
+        >
         <div className="container">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">
+              <h2
+                id="servicios-title"
+                className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4"
+              >
               Nuestros Servicios
             </h2>
             <p className="text-lg text-muted-foreground">
@@ -423,6 +449,8 @@ export default function Home() {
                       src={service.image}
                       alt={service.title}
                       className="w-full h-full object-cover transition-transform duration-700"
+                        loading="lazy"
+                        decoding="async"
                       style={{
                         transform:
                           activeService === index ? "scale(1.1)" : "scale(1)",
@@ -468,10 +496,10 @@ export default function Home() {
                 ¿Por Qué Elegirnos?
               </h2>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Nos distinguimos por nuestro compromiso con la excelencia en el
-                cuidado de la salud, combinando experiencia profesional con un
-                trato humano excepcional que marca la diferencia en la vida de
-                nuestros pacientes y sus familias.
+                  Nos distinguimos por nuestro compromiso con la excelencia en
+                  el cuidado de la salud, combinando experiencia profesional con
+                  un trato humano excepcional que marca la diferencia en la vida
+                  de nuestros pacientes y sus familias.
               </p>
 
               <div className="space-y-6">
@@ -505,6 +533,8 @@ export default function Home() {
                   src="https://private-us-east-1.manuscdn.com/sessionFile/eYuZQv3wZfuwwFs7nq57mv/sandbox/YppwhOFI8xFpm7wXkvyIg5-img-5_1770946977000_na1fn_ZXF1aXBvLXByb2Zlc2lvbmFs.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvZVl1WlF2M3daZnV3d0ZzN25xNTdtdi9zYW5kYm94L1lwcHdoT0ZJOHhGcG03d1hrdnlJZzUtaW1nLTVfMTc3MDk0Njk3NzAwMF9uYTFmbl9aWEYxYVhCdkxYQnliMlpsYzJsdmJtRnMucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=t1da9lpAHnuVcWQwyAWsYJCj4Swm7-A3kElQUhqgzHIE09NdMf65fq9sTGPtL6xl~eq2KhtNzP6sBgt6vWC9odbJHFVWNibi4~5bCIKRl~INxIEFwDXNcROqSqunYrX2dZU2C~5EJkinCNcz3UmuFE97-HgtdpEazJ0I92IPcgqcwLd9ZKmh2aGXDevUqHIRH~W0DvXCCgEA~rQzZU9n-Q7mNhMJrBNVwDg0~gGzAb~LByM6yOI-JlNXJn8-1ytm7vPw~lOnOLfR99iv5IAmGg6s70coPI1WayVXYkkvK33OwuX0DS9qRePXXsS3U7K~wDG55OUw0W9f0qIrf86-UQ__"
                   alt="Equipo profesional de Cuidados Especiales"
                   className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
                 />
               </div>
             </div>
@@ -513,11 +543,18 @@ export default function Home() {
       </section>
 
       {/* Sección de Contacto */}
-      <section id="contacto" className="py-20 bg-primary/5">
+        <section
+          id="contacto"
+          className="py-20 bg-primary/5"
+          aria-labelledby="contacto-title"
+        >
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">
+                <h2
+                  id="contacto-title"
+                  className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4"
+                >
                 Contáctenos
               </h2>
               <p className="text-lg text-muted-foreground">
@@ -534,7 +571,12 @@ export default function Home() {
                 <h3 className="font-display font-semibold text-lg mb-2">
                   Teléfono
                 </h3>
-                <p className="text-muted-foreground">+57 302 588 6714</p>
+                  <a
+                    href="tel:+573025886714"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    +57 302 588 6714
+                  </a>
               </Card>
 
               <Card className="text-center p-6 hover:shadow-lg transition-shadow duration-500">
@@ -544,7 +586,12 @@ export default function Home() {
                 <h3 className="font-display font-semibold text-lg mb-2">
                   Email
                 </h3>
-                <p className="text-muted-foreground">info@bencomobc.com</p>
+                  <a
+                    href="mailto:info@bencomobc.com"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    info@bencomobc.com
+                  </a>
               </Card>
 
               <Card className="text-center p-6 hover:shadow-lg transition-shadow duration-500">
@@ -641,8 +688,8 @@ export default function Home() {
               Los Mejores Precios del Mercado
             </h2>
             <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
-              Planes flexibles adaptados a tus necesidades. Elige el horario que
-              mejor se ajuste a tu situación.
+                Planes flexibles adaptados a tus necesidades. Elige el horario
+                que mejor se ajuste a tu situación.
             </p>
           </div>
 
@@ -719,8 +766,8 @@ export default function Home() {
                   ¡Únete a Nuestro Equipo!
                 </h2>
                 <p className="text-lg text-foreground/70">
-                  Estamos buscando profesionales comprometidos con la excelencia
-                  en el cuidado de la salud
+                    Estamos buscando profesionales comprometidos con la
+                    excelencia en el cuidado de la salud
                 </p>
               </div>
 
@@ -728,17 +775,17 @@ export default function Home() {
                 <p className="text-foreground mb-4 leading-relaxed">
                   Si eres{" "}
                   <strong>
-                    Médico, Enfermero(a), Auxiliar de Enfermería, Profesional de
-                    la Salud en Cuidado, Bienestar y Mantenimiento de Pacientes,
-                    o Cuidador
+                      Médico, Enfermero(a), Auxiliar de Enfermería, Profesional
+                      de la Salud en Cuidado, Bienestar y Mantenimiento de
+                      Pacientes, o Cuidador
                   </strong>{" "}
                   y deseas trabajar con nosotros en un ambiente profesional y
                   humanista, ¡nos encantaría conocerte!
                 </p>
                 <p className="text-foreground/80 text-sm">
-                  Ofrecemos oportunidades de crecimiento, capacitación continua
-                  y un equipo comprometido con la calidad de vida de nuestros
-                  pacientes.
+                    Ofrecemos oportunidades de crecimiento, capacitación
+                    continua y un equipo comprometido con la calidad de vida de
+                    nuestros pacientes.
                 </p>
               </div>
 
@@ -819,8 +866,8 @@ export default function Home() {
               </form>
 
               <p className="text-center text-sm text-foreground/60 mt-6">
-                Revisaremos tu solicitud y nos pondremos en contacto contigo en
-                breve. ¡Gracias por tu interés!
+                  Revisaremos tu solicitud y nos pondremos en contacto contigo
+                  en breve. ¡Gracias por tu interés!
               </p>
             </div>
           </div>
@@ -933,10 +980,10 @@ export default function Home() {
                 </AccordionTrigger>
                 <AccordionContent className="text-foreground/80 pt-4">
                   Puedes contactarnos a través de nuestro formulario de
-                  pre-registro, llamando al +57 302 588 6714, enviando un email
-                  a info@bencomobc.com o usando nuestro chat de WhatsApp. Nos
-                  encargaremos de evaluar tus necesidades y ofrecerte un
-                  presupuesto personalizado.
+                    pre-registro, llamando al +57 302 588 6714, enviando un
+                    email a info@bencomobc.com o usando nuestro chat de
+                    WhatsApp. Nos encargaremos de evaluar tus necesidades y
+                    ofrecerte un presupuesto personalizado.
                 </AccordionContent>
               </AccordionItem>
 
@@ -950,8 +997,9 @@ export default function Home() {
                 <AccordionContent className="text-foreground/80 pt-4">
                   Atendemos pacientes Cognitivos, Paliativos y con otras
                   condiciones especiales. Nuestro equipo está capacitado para
-                  brindar cuidados domiciliarios, hospitalarios, rehabilitación
-                  física y servicios especializados adaptados a cada situación.
+                    brindar cuidados domiciliarios, hospitalarios,
+                    rehabilitación física y servicios especializados adaptados a
+                    cada situación.
                 </AccordionContent>
               </AccordionItem>
 
@@ -963,9 +1011,9 @@ export default function Home() {
                   ¿Cuáles son los horarios disponibles?
                 </AccordionTrigger>
                 <AccordionContent className="text-foreground/80 pt-4">
-                  Ofrecemos planes flexibles de 6, 8, 10, 12 y 24 horas. Estamos
-                  disponibles 24/7 para emergencias y podemos adaptar nuestros
-                  horarios a tus necesidades específicas.
+                    Ofrecemos planes flexibles de 6, 8, 10, 12 y 24 horas.
+                    Estamos disponibles 24/7 para emergencias y podemos adaptar
+                    nuestros horarios a tus necesidades específicas.
                 </AccordionContent>
               </AccordionItem>
 
@@ -977,11 +1025,11 @@ export default function Home() {
                   ¿Cuáles son las formas de pago?
                 </AccordionTrigger>
                 <AccordionContent className="text-foreground/80 pt-4">
-                  Aceptamos más de una forma de pago para tu comodidad. Contamos
-                  con descuentos especiales: 10% para nuevos clientes durante el
-                  primer mes y 5% para clientes existentes a partir del segundo
-                  mes. Consulta directamente para conocer todas nuestras
-                  opciones de pago.
+                    Aceptamos más de una forma de pago para tu comodidad.
+                    Contamos con descuentos especiales: 10% para nuevos clientes
+                    durante el primer mes y 5% para clientes existentes a partir
+                    del segundo mes. Consulta directamente para conocer todas
+                    nuestras opciones de pago.
                 </AccordionContent>
               </AccordionItem>
 
@@ -1169,8 +1217,8 @@ export default function Home() {
               </h3>
               <p className="text-muted-foreground max-w-2xl mx-auto mb-6">
                 Nuestro equipo se somete regularmente a capacitaciones,
-                auditorías de calidad y evaluaciones de desempeño para asegurar
-                que cada paciente reciba la mejor atención posible.
+                  auditorías de calidad y evaluaciones de desempeño para
+                  asegurar que cada paciente reciba la mejor atención posible.
               </p>
               <p className="text-primary font-semibold">
                 Verificación disponible: +57 302 588 6714 | info@bencomobc.com
@@ -1179,6 +1227,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </main>
 
       {/* Botón de WhatsApp Flotante */}
       <a
@@ -1187,6 +1236,7 @@ export default function Home() {
         rel="noopener noreferrer"
         className="fixed bottom-8 right-8 z-40 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 flex items-center justify-center"
         title="Contáctanos por WhatsApp"
+        aria-label="Contáctanos por WhatsApp"
       >
         <MessageCircle className="w-6 h-6" />
       </a>
@@ -1198,9 +1248,11 @@ export default function Home() {
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <img
-                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663351260548/qxzyiIWZhGwNgFkM.png"
-                  alt="BENCOMO Logo"
+                  src="/BENCOMO.png"
+                  alt="BENCOMO Bienestar y Cuidado"
                   className="h-16 w-auto"
+                  width="512"
+                  height="512"
                 />
               </div>
               <p className="text-primary-foreground/80 leading-relaxed">
@@ -1228,11 +1280,18 @@ export default function Home() {
               <ul className="space-y-2 text-primary-foreground/80">
                 <li className="flex items-center gap-2">
                   <Phone className="w-4 h-4" />
+                  <a href="tel:+573025886714" className="hover:underline">
                   +57 302 588 6714
+                  </a>
                 </li>
                 <li className="flex items-center gap-2">
                   <Mail className="w-4 h-4" />
+                  <a
+                    href="mailto:info@bencomobc.com"
+                    className="hover:underline"
+                  >
                   info@bencomobc.com
+                  </a>
                 </li>
                 <li className="flex items-center gap-2">
                   <MapPin className="w-4 h-4" />

@@ -1,0 +1,17 @@
+{
+  "name": "BENCOMO Bienestar y Cuidado",
+  "short_name": "BENCOMO",
+  "description": "Cuidados domiciliarios, hospitalarios y rehabilitacion fisica en Colombia.",
+  "lang": "es-CO",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#2c5f6f",
+  "background_color": "#f5efe6",
+  "icons": [
+    {
+      "src": "/BENCOMO.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
