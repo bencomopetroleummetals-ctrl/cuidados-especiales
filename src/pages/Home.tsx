@@ -1244,7 +1244,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-primary text-primary-foreground py-12">
         <div className="container">
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
+          <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <img
@@ -1297,6 +1297,23 @@ export default function Home() {
                   <MapPin className="w-4 h-4" />
                   Atención en toda la ciudad
                 </li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 className="font-display font-semibold text-lg mb-4">
+                Enlaces de Interés
+              </h3>
+              <ul className="space-y-2 text-primary-foreground/80">
+                <li><a href="https://www.minsalud.gov.co" className="hover:underline" target="_blank" rel="noopener noreferrer">
+                  Ministerio de Salud y Protección Social
+                </a></li>
+                <li><a href="https://www.supersalud.gov.co" className="hover:underline" target="_blank" rel="noopener noreferrer">
+                  Superintendencia Nacional de Salud
+                </a></li>
+                <li><a href="https://www.who.int/es" className="hover:underline" target="_blank" rel="noopener noreferrer">
+                  Organización Mundial de la Salud (OMS)
+                </a> </li>
               </ul>
             </div>
           </div>
